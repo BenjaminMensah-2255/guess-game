@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(157, 143, 85);
+    overflow-x: hidden;
+}
+@keyframes continuousMove {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px); /* Adjust the distance and direction as needed */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#heading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 60px;
+    color: rgb(228, 10, 10);
+    animation: continuousMove 2s infinite; /* Adjust the duration as needed */
+}
+
+
+#picking {
+    text-align: center;
+    font-style: italic;
+    font-weight: 500px;
+    font-size: 30px;
+    color: rgb(208, 205, 202);
+    
+
+}
+
+#gameHeading {
+    text-align: center;
+    display: block; /* Add this line */
+    margin: 0 auto; /* Add this line */
+    font-size: 30px;
+    color: cyan;
+
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 20px;
+    
+}
+#submitId{
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: gold;
+    padding: 10px; /* Increase the padding to increase the size */
+    font-size: 20px; /* Increase the font size */
+    width: 150px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+
+}
+#submitId:hover{
+    background-color: rgb(228, 10, 10);
+    color: white;
+}
+#guessField{
+    border-radius: 5px;
+    border-width: 5px;
+    border-color: gold;
+    padding: 10px; /* Increase the padding to increase the size */
+    font-size: 20px; /* Increase the font size */
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(201, 248, 248); /* Add a background color */
+    color: red;
+}
+.foot{
+    text-align: center;
+    margin-top: 93px;
+    color: rgb(9, 238, 142);
+}
+.custom-alert {
+    position: fixed;
+    left: 10px; /* Adjust the left position as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    z-index: 9999;
+    border-radius: 5px;
+    animation: slideInLeft 0.5s ease-in-out;
+}
+
+.correct {
+    background-color: green;
+}
+
+.small {
+    background-color: blue;
+}
+
+.high {
+    background-color: purple;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
